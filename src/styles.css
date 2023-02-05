@@ -1,0 +1,69 @@
+body {
+  height: 100%;
+  overflow: hidden;
+
+  background-color: yellowgreen;
+}
+
+.App {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  transition: transform 0.3s;
+}
+
+.frame > div {
+  color: #33333300;
+
+  font-family: sans-serif;
+  text-align: center;
+
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 80px;
+  margin-bottom: 20px;
+
+  transform: scale(0.7);
+  transition: all 0.3s;
+}
+
+.frame > div.current {
+  color: #333333;
+  transform: scale(1);
+}
+
+.frame > div.current + div {
+  color: #33333380;
+}
+
+.frame > div.current + div + div {
+  color: #33333330;
+  transform: scale(0.5);
+}
+
+.animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
